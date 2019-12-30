@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Desde clase 04</title>
+</head>
+<body>
+    <div id="app" class="container mt-5">
+        <div  :class="['p-3','text-white',fondo]">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero officiis vel cupiditate. Repellat, adipisci quos earum molestias molestiae aperiam ipsam ducimus voluptatibus voluptatem at ea minus vitae voluptas praesentium doloremque.</p>
+        </div>
+        <input type="text" class="form-control" v-model="fondo"><!--Conectamos a una variable-->
+        <div class="text-white p-3" :class="{'bg-info':color, 'bg-success':!color}"><!--Contectamos a un condicional-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quae cupiditate velit aut sunt vero voluptatem eius? Molestias odio totam, nihil, laborum ipsa, nemo facilis impedit blanditiis quo alias explicabo!</p>
+        </div>
+
+        <button class="btn btn-primary" @click="color=!color">Cambiar</button><!--Boton que cambia el color -->
+    </div>
+    <!--script-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/cap04.js"></script>
+</body>
+</html>
